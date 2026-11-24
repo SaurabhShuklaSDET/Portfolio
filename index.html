@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saurabh Shukla | Quality Assurance Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
+        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black">S</span>
+        <span>Saurabh Shukla</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
+        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="./Saurabh_Shukla_Resume.pdf" target="_blank" download class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20 transition-all">
+          <i class="fa-solid fa-file-pdf"></i>
+          <span>Resume PDF</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
+      <div class="flex-1 space-y-6 text-center md:text-left">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/60 border border-blue-800/50 text-blue-400 text-xs font-semibold tracking-wide uppercase">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Available for QA / SDET Roles
+        </div>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Hi, I'm Saurabh.<br />
+          <span class="gradient-text">Quality Assurance Engineer</span>
+        </h1>
+        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+          Detail-oriented QA Engineer with <strong class="text-white">3.7+ years</strong> of expertise in Manual, API, and System Testing across <strong class="text-white">Web, Android, and iOS</strong>. Experienced in Electric Vehicle (EV) charging systems, SaaS ticketing platforms, real-time observability with Grafana, and end-to-end defect lifecycle management.
+        </p>
+
+        <!-- Social & Quick Action Buttons -->
+        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
+          <a href="https://www.linkedin.com/in/saurabh-shukla-9815821a2" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm flex items-center gap-2 border border-slate-700 transition">
+            <i class="fa-brands fa-linkedin text-blue-400"></i> LinkedIn
+          </a>
+          <a href="https://github.com/SaurabhShuklaSDET" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm flex items-center gap-2 border border-slate-700 transition">
+            <i class="fa-brands fa-github text-slate-300"></i> GitHub
+          </a>
+          <a href="mailto:Saurabh0iimt@gmail.com" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm flex items-center gap-2 shadow-lg shadow-blue-500/20 transition">
+            <i class="fa-solid fa-envelope"></i> Contact Me
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Stat Card -->
+      <div class="w-full md:w-80 lg:w-96 p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative">
+        <div class="space-y-5">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl font-bold">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-lg">Saurabh Shukla</h3>
+              <p class="text-xs text-slate-400">QA Engineer & Test Lead</p>
+            </div>
+          </div>
+          <hr class="border-slate-800">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+              <div class="text-2xl font-extrabold text-blue-400">3.7+</div>
+              <div class="text-xs text-slate-400 font-medium">Years Experience</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+              <div class="text-2xl font-extrabold text-emerald-400">5+</div>
+              <div class="text-xs text-slate-400 font-medium">Major Projects</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+              <div class="text-2xl font-extrabold text-purple-400">100%</div>
+              <div class="text-xs text-slate-400 font-medium">Release Ownership</div>
+            </div>
+            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
+              <div class="text-2xl font-extrabold text-amber-400">3</div>
+              <div class="text-xs text-slate-400 font-medium">Platforms (Web/App)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
+  <section id="skills" class="py-16 bg-slate-900/40 border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-white">Technical Expertise & Skills</h2>
+        <p class="text-slate-400 mt-2 text-sm">Comprehensive testing methodologies, tools, observability, and frameworks.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-blue-400 text-xl"><i class="fa-solid fa-list-check"></i></div>
+          <h3 class="font-bold text-white text-base">Testing Methodologies</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Manual Testing</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Functional Testing</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Regression Testing</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Smoke & Sanity</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">System Testing</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Integration Testing</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">UAT</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-emerald-400 text-xl"><i class="fa-solid fa-network-wired"></i></div>
+          <h3 class="font-bold text-white text-base">API Testing & Observability</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Postman</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Insomnia</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Grafana (Real-time Latency)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">HTTP Status 2xx/4xx/5xx</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-purple-400 text-xl"><i class="fa-solid fa-code"></i></div>
+          <h3 class="font-bold text-white text-base">Languages & Databases</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Java (Medium)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">SQL (Data Validation)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">HTML & CSS</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Selenium (Basic)</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-amber-400 text-xl"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3 class="font-bold text-white text-base">Process & Management</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">SDLC / STLC</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Agile (Scrum)</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">JIRA</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Test Plan & Strategy</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Defect Lifecycle</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-rose-400 text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3 class="font-bold text-white text-base">Target Platforms</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Web Applications</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Android OS</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Apple iOS</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Hardware-Software IoT</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
+          <div class="text-indigo-400 text-xl"><i class="fa-solid fa-users"></i></div>
+          <h3 class="font-bold text-white text-base">Key Leadership & Soft Skills</h3>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Cross-Team Coordination</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Ownership Mindset</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Analytical Debugging</span>
+            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Production Sign-off</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section -->
+  <section id="projects" class="py-20 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-3xl font-bold text-white">Flagship Projects</h2>
+      <p class="text-slate-400 mt-2 text-sm">Real-world impact delivered across EV Charging, SaaS, and Enterprise systems.</p>
+    </div>
+
+    <div class="space-y-8">
+      <!-- Project 1 -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-950 text-blue-400 border border-blue-800">EV & IoT</span>
+            <h3 class="text-xl font-bold text-white">HAVELLS EV MotrOn (CMS & Mobile App)</h3>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">09/2025 – Present | TechPerspect</span>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Electric vehicle Charge Management System and consumer mobile app enabling charger onboarding, real-time charging session controls, and scheduled charging based on time and electricity tariffs.
+        </p>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
+          <li>Executed end-to-end hardware-software integration testing validating seamless charger communication.</li>
+          <li>Monitored live API health and HTTP latency (2xx, 4xx, 5xx) via Grafana dashboards.</li>
+          <li>Formulated positive and negative scenarios ensuring system stability under intermittent hardware connection.</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Grafana</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Postman</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">IoT Integration</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Mobile App QA</span>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">SaaS Platform</span>
+            <h3 class="text-xl font-bold text-white">Ticket Management System — SaaS Web & Mobile</h3>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">05/2025 – Present | TechPerspect</span>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Enterprise customer support ticketing platform featuring dynamic SLA policies, priority automation, escalations, attachments, call logging, and multi-channel notification dispatch.
+        </p>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
+          <li>Led QA activities from requirement grooming through regression, UAT, and final production sign-off.</li>
+          <li>Authored high-coverage test cases for SLA escalation timers and lifecycle statuses.</li>
+          <li>Validated cross-browser compatibility and responsive performance across iOS and Android.</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">SLA Testing</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">UAT</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">JIRA</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Cross-Platform</span>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950 text-purple-400 border border-purple-800">EV Ecosystem</span>
+            <h3 class="text-xl font-bold text-white">MSIL & UNO MINDA EV Infrastructure Ecosystem</h3>
+          </div>
+          <span class="text-xs text-slate-400 font-medium">04/2025 – Present | TechPerspect</span>
+        </div>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Integrated EV ecosystem for the Maruti Suzuki & UNO MINDA joint venture, governing charger onboarding, technician commissioning, real-time telemetry, and automated Initial Quality Assessment (IQA) reports.
+        </p>
+        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
+          <li>QA Lead directing full test life-cycle and delivery gatekeeping.</li>
+          <li>Conducted comprehensive REST API testing (GET, POST) using Postman and Insomnia.</li>
+          <li>Utilized Grafana to detect spikes in latency and server HTTP errors under real-time network traffic.</li>
+        </ul>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">QA Lead</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">API Validation</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Insomnia</span>
+          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">IQA Automation</span>
+        </div>
+      </div>
+
+      <!-- Project 4 & 5 Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-bold text-white">Device Monitoring System</h4>
+            <span class="text-xs text-slate-400">08/2023 – 12/2024</span>
+          </div>
+          <p class="text-xs text-blue-400 font-semibold mb-2">Crebri Technologies Pvt. Ltd.</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Real-time tracking of hardware telemetry, device availability, operational diagnostics, and automated alerts for system failures.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+          <div class="flex justify-between items-start mb-2">
+            <h4 class="font-bold text-white">Enterprise ERP Web App</h4>
+            <span class="text-xs text-slate-400">09/2022 – 03/2023</span>
+          </div>
+          <p class="text-xs text-blue-400 font-semibold mb-2">Crebri Technologies Pvt. Ltd.</p>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            End-to-end ERP suite covering Sales, Finance, HRMS, and Inventory. Executed backend SQL queries to ensure zero data discrepancies.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience Timeline -->
+  <section id="experience" class="py-16 bg-slate-900/40 border-t border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-white">Work Experience</h2>
+        <p class="text-slate-400 mt-2 text-sm">Professional career progression and achievements.</p>
+      </div>
+
+      <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-800">
+        <!-- Item 1 -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+          <div class="hidden md:block w-1/2 text-right pr-8">
+            <span class="text-blue-400 font-bold text-base">QA Engineer</span>
+            <p class="text-xs text-slate-400 font-medium">TechPerspect Software Pvt. Ltd.</p>
+            <p class="text-xs text-slate-500">04/2025 – Present</p>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-blue-600 border-4 border-slate-950 flex items-center justify-center text-white text-xs z-10 shrink-0">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="w-full md:w-1/2 pl-4 md:pl-8">
+            <div class="md:hidden mb-2">
+              <span class="text-blue-400 font-bold text-base">QA Engineer</span>
+              <p class="text-xs text-slate-400 font-medium">TechPerspect Software Pvt. Ltd. (04/2025 – Present)</p>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-xl border border-slate-800">
+              Directing QA activities across Havells EV MotrOn, Ticket Management SaaS, and MSIL-UNO MINDA joint projects. Driving API observability via Grafana and release validation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
+          <div class="hidden md:block w-1/2 text-right pr-8">
+            <span class="text-blue-400 font-bold text-base">Software Tester</span>
+            <p class="text-xs text-slate-400 font-medium">Crebri Technologies Pvt. Ltd.</p>
+            <p class="text-xs text-slate-500">08/2023 – 12/2024</p>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-slate-700 border-4 border-slate-950 flex items-center justify-center text-white text-xs z-10 shrink-0">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="w-full md:w-1/2 pl-4 md:pl-8">
+            <div class="md:hidden mb-2">
+              <span class="text-blue-400 font-bold text-base">Software Tester</span>
+              <p class="text-xs text-slate-400 font-medium">Crebri Technologies Pvt. Ltd. (08/2023 – 12/2024)</p>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-xl border border-slate-800">
+              Conducted functional and system testing for device monitoring services and ERP platforms. Validated complex SQL datasets and maintained regression suites.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-blue-950/40 to-slate-900 border border-blue-900/40">
+      <h2 class="text-3xl font-bold text-white mb-4">Let's Connect & Collaborate</h2>
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
+        Looking for a passionate, analytical Quality Assurance Engineer to ensure high reliability and zero-defect releases for your web, mobile, or IoT platform? Let's talk!
+      </p>
+
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <a href="mailto:Saurabh0iimt@gmail.com" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-xl shadow-blue-500/25 flex items-center gap-2 transition">
+          <i class="fa-solid fa-envelope"></i> Saurabh0iimt@gmail.com
+        </a>
+        <a href="tel:+918588934132" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 flex items-center gap-2 transition">
+          <i class="fa-solid fa-phone"></i> +91 8588934132
+        </a>
+      </div>
+
+      <div class="mt-8 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <p>© 2026 Saurabh Shukla. Built for Test-AI-Automation.</p>
+        <p>Sultanpur, Uttar Pradesh, India</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
