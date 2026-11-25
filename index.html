@@ -1,403 +1,959 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saurabh Shukla | Quality Assurance Engineer Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              900: '#1e3a8a',
-            }
-          }
-        }
-      }
-    }
-  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saurabh Shukla — Quality Assurance Engineer &amp; SDET · 4+ Years Experience</title>
+  <meta name="description" content="Saurabh Shukla — Quality Assurance Engineer with 4+ years of experience across Web, Android, iOS, and SaaS platforms. Specializing in Manual, REST API, System, Integration, and E2E Testing for EV Charging Ecosystems, SaaS Deployments, and Grafana Observability.">
+
+  <!-- Google Fonts matching paritosh.vercel.app aesthetic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <style>
-    .gradient-text {
-      background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    /* ---------------- Design System: Editorial Warm Craft Paper Theme ---------------- */
+    :root {
+      --bg-canvas: #f0ede3;
+      --bg-card: #fcfbf8;
+      --bg-card-alt: #f6f3eb;
+      --ink: #1a1a18;
+      --ink-muted: #6e6b63;
+      --ink-subtle: #8a8780;
+      --border-warm: #e0dcd2;
+      --border-dark: #1a1a18;
+      --accent-terracotta: #d8452a;
+      --accent-green: #24824d;
+      --accent-blue: #2357a3;
+      --dark-canvas: #1b1b19;
+      --dark-card: #242421;
+      --dark-text: #fbfaf7;
+      --dark-muted: #8c8981;
+      --dark-border: #363632;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 86px; }
+    body {
+      background-color: var(--bg-canvas);
+      color: var(--ink);
+      font-family: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      selection-background-color: var(--accent-terracotta);
+      selection-color: #ffffff;
+    }
+    ::selection { background: #d8452a; color: #ffffff; }
+
+    /* Typography Utilities */
+    .font-hand { font-family: 'Caveat', cursive; }
+    .font-mono { font-family: 'JetBrains Mono', monospace; }
+    .font-sans { font-family: 'Hanken Grotesk', sans-serif; }
+
+    /* Transitions & Micro-interactions */
+    a { color: inherit; text-decoration: none; transition: all 0.2s ease; }
+    .navlink:hover { color: var(--accent-terracotta) !important; }
+    .hbtn {
+      transition: transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.22s ease, background-color 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hbtn:hover {
+      transform: translateY(-2px);
+    }
+    .hbtn:active {
+      transform: translateY(1px);
+    }
+
+    /* Handcrafted Card Styling */
+    .craft-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-warm);
+      border-radius: 18px;
+      transition: transform 0.26s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.26s ease, box-shadow 0.26s ease;
+      position: relative;
+    }
+    .craft-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--ink);
+      box-shadow: 0 14px 34px -10px rgba(26, 26, 24, 0.08);
+    }
+
+    /* Sketch Doodles & Annotations */
+    .doodle-arrow {
+      position: absolute;
+      pointer-events: none;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 9999px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    /* Filter SVG Wobble Effect */
+    @keyframes pulseLive {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.35); opacity: 0.65; }
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-green);
+      animation: pulseLive 2s infinite ease-in-out;
+    }
+
+    /* Layout Containers */
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .section-spacing {
+      padding: 88px 0;
+    }
+    .section-header {
+      margin-bottom: 48px;
+    }
+    .section-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-terracotta);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+
+    /* Portrait Handcrafted Frame */
+    .portrait-wrapper {
+      position: relative;
+      width: 290px;
+      height: 350px;
+    }
+    .portrait-backdrop {
+      position: absolute;
+      inset: 8px -8px -8px 8px;
+      border: 2px dashed #3a3a36;
+      border-radius: 24px;
+      background: #e8e3d5;
+      z-index: 1;
+      transform: rotate(2deg);
+      transition: transform 0.3s ease;
+    }
+    .portrait-wrapper:hover .portrait-backdrop {
+      transform: rotate(3.5deg) translate(2px, 2px);
+    }
+    .portrait-img-box {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 22px;
+      border: 2px solid var(--ink);
+      overflow: hidden;
+      background: #dfd9cb;
+      z-index: 2;
+      box-shadow: 0 16px 36px -12px rgba(26,26,24,0.18);
+    }
+    .portrait-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .portrait-wrapper:hover .portrait-img-box img {
+      transform: scale(1.03);
+    }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr !important; gap: 48px !important; }
+      .portrait-wrapper { margin: 0 auto; }
+      .about-grid { grid-template-columns: 1fr !important; }
+      .contact-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+    }
+    @media (max-width: 680px) {
+      .section-spacing { padding: 60px 0; }
+      .nav-links { display: none !important; }
+      .hero-title { font-size: 34px !important; line-height: 1.18 !important; }
+      .portrait-wrapper { width: 250px; height: 300px; }
+      .stats-strip { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white">
+<body>
 
-  <!-- Navigation Bar -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold tracking-tight text-white flex items-center gap-2">
-        <span class="w-8 h-8 rounded-lg bg-blue-600 text-white flex items-center justify-center font-black">S</span>
-        <span>Saurabh Shukla</span>
+  <!-- ======================== HEADER / NAVBAR ======================== -->
+  <header style="position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(240, 237, 227, 0.88); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--border-warm);">
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; height:74px;">
+      
+      <!-- Logo / Signature -->
+      <a href="#" style="display:flex; align-items:center; gap:10px;">
+        <span style="font-family:'Caveat', cursive; font-size:32px; font-weight:700; color:var(--ink); line-height:1;">Saurabh Shukla</span>
+        <span style="font-family:'JetBrains Mono', monospace; font-size:11px; background:var(--ink); color:#fff; padding:2px 7px; border-radius:6px; font-weight:600;">QA · SDET</span>
       </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+
+      <!-- Center Monospace Nav Links -->
+      <nav class="nav-links" style="display:flex; align-items:center; gap:28px; font-family:'JetBrains Mono', monospace; font-size:12.5px; font-weight:500; letter-spacing:0.04em;">
+        <a href="#about" class="navlink" style="color:var(--ink);">01 // ABOUT</a>
+        <a href="#skills" class="navlink" style="color:var(--ink);">02 // SKILLS</a>
+        <a href="#projects" class="navlink" style="color:var(--ink);">03 // PROJECTS</a>
+        <a href="#experience" class="navlink" style="color:var(--ink);">04 // EXPERIENCE</a>
+        <a href="#contact" class="navlink" style="color:var(--ink);">05 // CONTACT</a>
       </nav>
-      <div class="flex items-center gap-3">
-        <a href="./Saurabh_Shukla_Resume.pdf" target="_blank" download class="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-500/20 transition-all">
-          <i class="fa-solid fa-file-pdf"></i>
-          <span>Resume PDF</span>
+
+      <!-- Right CTAs -->
+      <div style="display:flex; align-items:center; gap:12px;">
+        <a href="./Saurabh_Shukla_QA_4+_ATS.pdf" target="_blank" download class="hbtn" style="background:#fff; color:var(--ink); border:1.5px solid var(--ink); padding:8px 16px; border-radius:10px; font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:600; box-shadow:2px 2px 0px var(--ink);">
+          <i class="fa-solid fa-file-arrow-down" style="color:var(--accent-terracotta);"></i>
+          <span>Resume (4+ ATS)</span>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="about" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="flex flex-col md:flex-row items-center gap-10 lg:gap-16">
-      <div class="flex-1 space-y-6 text-center md:text-left">
-        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-950/60 border border-blue-800/50 text-blue-400 text-xs font-semibold tracking-wide uppercase">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          Available for QA / SDET Roles
-        </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-          Hi, I'm Saurabh.<br />
-          <span class="gradient-text">Quality Assurance Engineer</span>
-        </h1>
-        <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-          Detail-oriented QA Engineer with <strong class="text-white">3.7+ years</strong> of expertise in Manual, API, and System Testing across <strong class="text-white">Web, Android, and iOS</strong>. Experienced in Electric Vehicle (EV) charging systems, SaaS ticketing platforms, real-time observability with Grafana, and end-to-end defect lifecycle management.
-        </p>
+  <main style="padding-top:74px;">
 
-        <!-- Social & Quick Action Buttons -->
-        <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 pt-2">
-          <a href="https://www.linkedin.com/in/saurabh-shukla-9815821a2" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm flex items-center gap-2 border border-slate-700 transition">
-            <i class="fa-brands fa-linkedin text-blue-400"></i> LinkedIn
-          </a>
-          <a href="https://github.com/SaurabhShuklaSDET" target="_blank" class="px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium text-sm flex items-center gap-2 border border-slate-700 transition">
-            <i class="fa-brands fa-github text-slate-300"></i> GitHub
-          </a>
-          <a href="mailto:Saurabh0iimt@gmail.com" class="px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-medium text-sm flex items-center gap-2 shadow-lg shadow-blue-500/20 transition">
-            <i class="fa-solid fa-envelope"></i> Contact Me
-          </a>
-        </div>
-      </div>
-
-      <!-- Hero Stat Card -->
-      <div class="w-full md:w-80 lg:w-96 p-6 rounded-2xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative">
-        <div class="space-y-5">
-          <div class="flex items-center gap-4">
-            <div class="w-14 h-14 rounded-xl bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl font-bold">
-              <i class="fa-solid fa-shield-halved"></i>
+    <!-- ======================== HERO SECTION ======================== -->
+    <section class="section-spacing" style="padding-top:64px; padding-bottom:72px;">
+      <div class="container">
+        
+        <div class="hero-grid" style="display:grid; grid-template-columns: 1fr 340px; gap:64px; align-items:center;">
+          
+          <!-- Left Hero Narrative -->
+          <div>
+            <!-- Status Badge -->
+            <div style="margin-bottom:20px; display:inline-flex; align-items:center; gap:10px; padding:6px 14px; background:#fff; border:1px solid var(--border-warm); border-radius:9999px; box-shadow:0 2px 6px rgba(0,0,0,0.03);">
+              <span class="pulse-dot"></span>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:600; color:var(--ink);">OPEN FOR QUALITY ASSURANCE &amp; SDET ROLES</span>
             </div>
-            <div>
-              <h3 class="font-bold text-white text-lg">Saurabh Shukla</h3>
-              <p class="text-xs text-slate-400">QA Engineer & Test Lead</p>
+
+            <!-- Headline with Sketch Style -->
+            <h1 class="hero-title" style="font-size:52px; font-weight:800; line-height:1.14; letter-spacing:-0.03em; margin-bottom:20px; color:var(--ink);">
+              Hi, I'm Saurabh —<br>
+              <span style="position:relative; display:inline-block;">
+                Quality Assurance Engineer
+                <svg style="position:absolute; bottom:-6px; left:0; width:100%; height:12px; overflow:visible;" viewBox="0 0 300 12" fill="none" preserveAspectRatio="none">
+                  <path d="M2 9 C 75 3, 180 3, 298 7" stroke="#d8452a" stroke-width="3.5" stroke-linecap="round"/>
+                </svg>
+              </span>
+            </h1>
+
+            <p style="font-size:18px; line-height:1.68; color:var(--ink-muted); margin-bottom:24px; max-width:620px;">
+              <strong style="color:var(--ink); font-weight:700;">4+ years</strong> of hands-on experience owning end-to-end quality across <strong style="color:var(--ink);">Web, Android, iOS, and SaaS</strong> ecosystems. Proven mastery in <strong style="color:var(--ink);">EV Charging Infrastructure (CMS &amp; EMSP)</strong>, multi-CPO wallet ledger verification, REST API testing, and real-time observability using <strong style="color:var(--ink);">Grafana (2xx/4xx/5xx &amp; latency)</strong>.
+            </p>
+
+            <!-- Handwritten Annotation with Doodle Arrow -->
+            <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+              <svg width="34" height="26" viewBox="0 0 34 26" fill="none" style="transform:scaleY(-1);">
+                <path d="M2 4 C10 16, 20 22, 30 18 M30 18 L24 14 M30 18 L28 24" stroke="#d8452a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="font-hand" style="font-size:20px; color:var(--accent-terracotta); font-weight:600;">
+                Trained to break workflows before customers do.
+              </span>
+            </div>
+
+            <!-- CTA Action Buttons -->
+            <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px;">
+              <a href="#projects" class="hbtn" style="background:var(--ink); color:#fff; padding:12px 24px; border-radius:12px; font-weight:600; font-size:14px; box-shadow:3px 3px 0 var(--accent-terracotta);">
+                <span>Explore Flagship Projects</span>
+                <i class="fa-solid fa-arrow-down-long" style="font-size:12px;"></i>
+              </a>
+
+              <a href="mailto:Saurabh0iimt@gmail.com" class="hbtn" style="background:#fff; color:var(--ink); border:1.5px solid var(--border-dark); padding:12px 22px; border-radius:12px; font-weight:600; font-size:14px; box-shadow:2px 2px 0 var(--border-dark);">
+                <i class="fa-regular fa-envelope" style="color:var(--accent-terracotta);"></i>
+                <span>Get in Touch</span>
+              </a>
+
+              <a href="https://www.linkedin.com/in/saurabh-shukla-9815821a2" target="_blank" rel="noopener" class="hbtn" style="background:#fff; color:var(--ink); border:1.5px solid var(--border-dark); padding:12px 16px; border-radius:12px; font-size:15px; box-shadow:2px 2px 0 var(--border-dark);" title="LinkedIn Profile">
+                <i class="fa-brands fa-linkedin-in" style="color:#0a66c2;"></i>
+              </a>
+
+              <a href="https://github.com/SaurabhShuklaSDET" target="_blank" rel="noopener" class="hbtn" style="background:#fff; color:var(--ink); border:1.5px solid var(--border-dark); padding:12px 16px; border-radius:12px; font-size:15px; box-shadow:2px 2px 0 var(--border-dark);" title="GitHub Profile">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Hero Portrait Box -->
+          <div style="display:flex; flex-direction:column; align-items:center;">
+            <div class="portrait-wrapper">
+              <div class="portrait-backdrop"></div>
+              <div class="portrait-img-box">
+                <img src="./SaurabhshuklaSDET.jpg" alt="Saurabh Shukla - Quality Assurance Engineer & SDET" onerror="this.onerror=null; this.src='SaurabhshuklaSDET.jpg';">
+              </div>
+            </div>
+
+            <!-- Hand-drawn caption under portrait -->
+            <div style="margin-top:20px; text-align:center;">
+              <span class="font-hand" style="font-size:21px; color:var(--ink); font-weight:600;">
+                Saurabh Shukla
+              </span>
+              <p style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle); letter-spacing:0.04em;">
+                QA LEAD &amp; SDET · SULTANPUR, INDIA
+              </p>
             </div>
           </div>
-          <hr class="border-slate-800">
-          <div class="grid grid-cols-2 gap-4">
-            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-              <div class="text-2xl font-extrabold text-blue-400">3.7+</div>
-              <div class="text-xs text-slate-400 font-medium">Years Experience</div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================== METRICS STRIP ======================== -->
+    <section style="border-top:1px solid var(--border-warm); border-bottom:1px solid var(--border-warm); background:#fcfbf8; padding:32px 0;">
+      <div class="container">
+        <div class="stats-strip" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:24px; text-align:center;">
+          
+          <div style="padding:10px;">
+            <div style="font-size:38px; font-weight:800; color:var(--ink); letter-spacing:-0.03em; line-height:1;">4+ <span style="font-size:24px; color:var(--accent-terracotta);">Yrs</span></div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-muted); margin-top:8px; font-weight:500;">TESTING EXPERIENCE</div>
+          </div>
+
+          <div style="padding:10px; border-left:1px dashed var(--border-warm);">
+            <div style="font-size:38px; font-weight:800; color:var(--ink); letter-spacing:-0.03em; line-height:1;">6+ <span style="font-size:24px; color:var(--accent-blue);">Apps</span></div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-muted); margin-top:8px; font-weight:500;">FLAGSHIP PLATFORMS</div>
+          </div>
+
+          <div style="padding:10px; border-left:1px dashed var(--border-warm);">
+            <div style="font-size:38px; font-weight:800; color:var(--ink); letter-spacing:-0.03em; line-height:1;">100%</div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-muted); margin-top:8px; font-weight:500;">RELEASE SIGN-OFF E2E</div>
+          </div>
+
+          <div style="padding:10px; border-left:1px dashed var(--border-warm);">
+            <div style="font-size:38px; font-weight:800; color:var(--ink); letter-spacing:-0.03em; line-height:1;">24/7</div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--ink-muted); margin-top:8px; font-weight:500;">GRAFANA OBSERVABILITY</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================== 01 // ABOUT PHILOSOPHY ======================== -->
+    <section id="about" class="section-spacing">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">01 // TESTING PHILOSOPHY</div>
+          <h2 style="font-size:36px; font-weight:800; letter-spacing:-0.02em; color:var(--ink);">
+            Engineering Confidence Through Rigorous Verification
+          </h2>
+        </div>
+
+        <div class="about-grid" style="display:grid; grid-template-columns: repeat(3, 1fr); gap:24px;">
+          
+          <div class="craft-card" style="padding:32px;">
+            <div style="width:44px; height:44px; border-radius:12px; background:#f4efe6; border:1px solid var(--border-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-terracotta); font-size:18px; margin-bottom:20px;">
+              <i class="fa-solid fa-charging-station"></i>
             </div>
-            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-              <div class="text-2xl font-extrabold text-emerald-400">5+</div>
-              <div class="text-xs text-slate-400 font-medium">Major Projects</div>
+            <h3 style="font-size:19px; font-weight:700; color:var(--ink); margin-bottom:12px;">Hardware &amp; IoT EV Ecosystems</h3>
+            <p style="font-size:14.5px; color:var(--ink-muted); line-height:1.65;">
+              Deep expertise validating complex EV Charge Management Systems (CMS &amp; EMSP). From hardware charger handshake and live power telemetry to scheduled time-of-day tariffs and cloud sync.
+            </p>
+          </div>
+
+          <div class="craft-card" style="padding:32px;">
+            <div style="width:44px; height:44px; border-radius:12px; background:#f4efe6; border:1px solid var(--border-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-blue); font-size:18px; margin-bottom:20px;">
+              <i class="fa-solid fa-wallet"></i>
             </div>
-            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-              <div class="text-2xl font-extrabold text-purple-400">100%</div>
-              <div class="text-xs text-slate-400 font-medium">Release Ownership</div>
+            <h3 style="font-size:19px; font-weight:700; color:var(--ink); margin-bottom:12px;">Wallet &amp; Ledger Business Rules</h3>
+            <p style="font-size:14.5px; color:var(--ink-muted); line-height:1.65;">
+              Expert in multi-CPO SaaS deployment validation. Rigorously testing exact-balance boundary conditions, wallet deduction timing, insufficient-balance blocking, and automated invoice/BOQ generation.
+            </p>
+          </div>
+
+          <div class="craft-card" style="padding:32px;">
+            <div style="width:44px; height:44px; border-radius:12px; background:#f4efe6; border:1px solid var(--border-warm); display:flex; align-items:center; justify-content:center; color:var(--accent-green); font-size:18px; margin-bottom:20px;">
+              <i class="fa-solid fa-chart-line"></i>
             </div>
-            <div class="p-3 bg-slate-900/60 rounded-xl border border-slate-800/80">
-              <div class="text-2xl font-extrabold text-amber-400">3</div>
-              <div class="text-xs text-slate-400 font-medium">Platforms (Web/App)</div>
-            </div>
+            <h3 style="font-size:19px; font-weight:700; color:var(--ink); margin-bottom:12px;">Observability-Driven QA</h3>
+            <p style="font-size:14.5px; color:var(--ink-muted); line-height:1.65;">
+              Testing beyond the UI: utilizing Postman &amp; Insomnia for API contracts and monitoring live server health via Grafana dashboards to spot latency spikes and 4xx/5xx regressions in production.
+            </p>
           </div>
+
         </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Technical Skills Section -->
-  <section id="skills" class="py-16 bg-slate-900/40 border-y border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <h2 class="text-3xl font-bold text-white">Technical Expertise & Skills</h2>
-        <p class="text-slate-400 mt-2 text-sm">Comprehensive testing methodologies, tools, observability, and frameworks.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-blue-400 text-xl"><i class="fa-solid fa-list-check"></i></div>
-          <h3 class="font-bold text-white text-base">Testing Methodologies</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Manual Testing</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Functional Testing</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Regression Testing</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Smoke & Sanity</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">System Testing</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Integration Testing</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">UAT</span>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-emerald-400 text-xl"><i class="fa-solid fa-network-wired"></i></div>
-          <h3 class="font-bold text-white text-base">API Testing & Observability</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Postman</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Insomnia</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">Grafana (Real-time Latency)</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">HTTP Status 2xx/4xx/5xx</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-emerald-950/60 border border-emerald-800/40 text-emerald-300">REST APIs</span>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-purple-400 text-xl"><i class="fa-solid fa-code"></i></div>
-          <h3 class="font-bold text-white text-base">Languages & Databases</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Java (Medium)</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">SQL (Data Validation)</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">HTML & CSS</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Selenium (Basic)</span>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-amber-400 text-xl"><i class="fa-solid fa-diagram-project"></i></div>
-          <h3 class="font-bold text-white text-base">Process & Management</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">SDLC / STLC</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Agile (Scrum)</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">JIRA</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Test Plan & Strategy</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Defect Lifecycle</span>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-rose-400 text-xl"><i class="fa-solid fa-mobile-screen-button"></i></div>
-          <h3 class="font-bold text-white text-base">Target Platforms</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Web Applications</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Android OS</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Apple iOS</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Hardware-Software IoT</span>
-          </div>
-        </div>
-
-        <!-- Card 6 -->
-        <div class="p-6 rounded-xl bg-slate-900 border border-slate-800 space-y-3">
-          <div class="text-indigo-400 text-xl"><i class="fa-solid fa-users"></i></div>
-          <h3 class="font-bold text-white text-base">Key Leadership & Soft Skills</h3>
-          <div class="flex flex-wrap gap-2 pt-2">
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Cross-Team Coordination</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Ownership Mindset</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Analytical Debugging</span>
-            <span class="px-2.5 py-1 text-xs rounded-md bg-slate-800 text-slate-300">Production Sign-off</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Showcase Section -->
-  <section id="projects" class="py-20 max-w-6xl mx-auto px-4 sm:px-6">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold text-white">Flagship Projects</h2>
-      <p class="text-slate-400 mt-2 text-sm">Real-world impact delivered across EV Charging, SaaS, and Enterprise systems.</p>
-    </div>
-
-    <div class="space-y-8">
-      <!-- Project 1 -->
-      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-all">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-blue-950 text-blue-400 border border-blue-800">EV & IoT</span>
-            <h3 class="text-xl font-bold text-white">HAVELLS EV MotrOn (CMS & Mobile App)</h3>
-          </div>
-          <span class="text-xs text-slate-400 font-medium">09/2025 – Present | TechPerspect</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4">
-          Electric vehicle Charge Management System and consumer mobile app enabling charger onboarding, real-time charging session controls, and scheduled charging based on time and electricity tariffs.
-        </p>
-        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
-          <li>Executed end-to-end hardware-software integration testing validating seamless charger communication.</li>
-          <li>Monitored live API health and HTTP latency (2xx, 4xx, 5xx) via Grafana dashboards.</li>
-          <li>Formulated positive and negative scenarios ensuring system stability under intermittent hardware connection.</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Grafana</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Postman</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">IoT Integration</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Mobile App QA</span>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition-all">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-400 border border-emerald-800">SaaS Platform</span>
-            <h3 class="text-xl font-bold text-white">Ticket Management System — SaaS Web & Mobile</h3>
-          </div>
-          <span class="text-xs text-slate-400 font-medium">05/2025 – Present | TechPerspect</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4">
-          Enterprise customer support ticketing platform featuring dynamic SLA policies, priority automation, escalations, attachments, call logging, and multi-channel notification dispatch.
-        </p>
-        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
-          <li>Led QA activities from requirement grooming through regression, UAT, and final production sign-off.</li>
-          <li>Authored high-coverage test cases for SLA escalation timers and lifecycle statuses.</li>
-          <li>Validated cross-browser compatibility and responsive performance across iOS and Android.</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">SLA Testing</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">UAT</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">JIRA</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Cross-Platform</span>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="p-6 sm:p-8 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-all">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-          <div class="flex items-center gap-3">
-            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-purple-950 text-purple-400 border border-purple-800">EV Ecosystem</span>
-            <h3 class="text-xl font-bold text-white">MSIL & UNO MINDA EV Infrastructure Ecosystem</h3>
-          </div>
-          <span class="text-xs text-slate-400 font-medium">04/2025 – Present | TechPerspect</span>
-        </div>
-        <p class="text-slate-300 text-sm leading-relaxed mb-4">
-          Integrated EV ecosystem for the Maruti Suzuki & UNO MINDA joint venture, governing charger onboarding, technician commissioning, real-time telemetry, and automated Initial Quality Assessment (IQA) reports.
-        </p>
-        <ul class="list-disc list-inside text-xs sm:text-sm text-slate-400 space-y-1.5 mb-5">
-          <li>QA Lead directing full test life-cycle and delivery gatekeeping.</li>
-          <li>Conducted comprehensive REST API testing (GET, POST) using Postman and Insomnia.</li>
-          <li>Utilized Grafana to detect spikes in latency and server HTTP errors under real-time network traffic.</li>
-        </ul>
-        <div class="flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">QA Lead</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">API Validation</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">Insomnia</span>
-          <span class="px-2 py-1 rounded bg-slate-800 text-slate-300 font-mono">IQA Automation</span>
-        </div>
-      </div>
-
-      <!-- Project 4 & 5 Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-          <div class="flex justify-between items-start mb-2">
-            <h4 class="font-bold text-white">Device Monitoring System</h4>
-            <span class="text-xs text-slate-400">08/2023 – 12/2024</span>
-          </div>
-          <p class="text-xs text-blue-400 font-semibold mb-2">Crebri Technologies Pvt. Ltd.</p>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            Real-time tracking of hardware telemetry, device availability, operational diagnostics, and automated alerts for system failures.
+    <!-- ======================== 02 // TECHNICAL SKILLS ======================== -->
+    <section id="skills" class="section-spacing" style="background:#fcfbf8; border-top:1px solid var(--border-warm); border-bottom:1px solid var(--border-warm);">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-tag">02 // TECHNICAL TOOLKIT</div>
+          <h2 style="font-size:36px; font-weight:800; letter-spacing:-0.02em; color:var(--ink);">
+            Skills, Tools &amp; Domain Competencies
+          </h2>
+          <p style="color:var(--ink-muted); font-size:16px; margin-top:8px;">
+            A holistic skill matrix honed over 4+ years in fast-paced Agile &amp; enterprise production releases.
           </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-          <div class="flex justify-between items-start mb-2">
-            <h4 class="font-bold text-white">Enterprise ERP Web App</h4>
-            <span class="text-xs text-slate-400">09/2022 – 03/2023</span>
-          </div>
-          <p class="text-xs text-blue-400 font-semibold mb-2">Crebri Technologies Pvt. Ltd.</p>
-          <p class="text-xs text-slate-300 leading-relaxed">
-            End-to-end ERP suite covering Sales, Finance, HRMS, and Inventory. Executed backend SQL queries to ensure zero data discrepancies.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Work Experience Timeline -->
-  <section id="experience" class="py-16 bg-slate-900/40 border-t border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-white">Work Experience</h2>
-        <p class="text-slate-400 mt-2 text-sm">Professional career progression and achievements.</p>
-      </div>
-
-      <div class="space-y-8 relative before:absolute before:inset-0 before:left-4 md:before:left-1/2 before:w-0.5 before:bg-slate-800">
-        <!-- Item 1 -->
-        <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
-          <div class="hidden md:block w-1/2 text-right pr-8">
-            <span class="text-blue-400 font-bold text-base">QA Engineer</span>
-            <p class="text-xs text-slate-400 font-medium">TechPerspect Software Pvt. Ltd.</p>
-            <p class="text-xs text-slate-500">04/2025 – Present</p>
-          </div>
-          <div class="w-8 h-8 rounded-full bg-blue-600 border-4 border-slate-950 flex items-center justify-center text-white text-xs z-10 shrink-0">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <div class="w-full md:w-1/2 pl-4 md:pl-8">
-            <div class="md:hidden mb-2">
-              <span class="text-blue-400 font-bold text-base">QA Engineer</span>
-              <p class="text-xs text-slate-400 font-medium">TechPerspect Software Pvt. Ltd. (04/2025 – Present)</p>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:24px;">
+          
+          <!-- Methodologies -->
+          <div class="craft-card" style="padding:28px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <h3 style="font-size:17px; font-weight:700; color:var(--ink);">Testing Methodologies</h3>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--accent-terracotta);">CORE EXP</span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-xl border border-slate-800">
-              Directing QA activities across Havells EV MotrOn, Ticket Management SaaS, and MSIL-UNO MINDA joint projects. Driving API observability via Grafana and release validation.
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Manual Testing</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">End-to-End (E2E)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">System &amp; Integration</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Functional &amp; Non-Functional</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Regression &amp; Retesting</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Smoke &amp; Sanity</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">GUI &amp; Usability</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">UAT Sign-off</span>
+            </div>
+          </div>
+
+          <!-- API & Observability -->
+          <div class="craft-card" style="padding:28px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <h3 style="font-size:17px; font-weight:700; color:var(--ink);">API &amp; Observability</h3>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--accent-green);">SPECIALTY</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Postman (REST API)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Insomnia</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Grafana Observability</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Live API Traffic</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">HTTP 2xx/4xx/5xx Tracking</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Latency Spike Analysis</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">GET / POST / PUT Payloads</span>
+            </div>
+          </div>
+
+          <!-- Process & Bug Tracking -->
+          <div class="craft-card" style="padding:28px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <h3 style="font-size:17px; font-weight:700; color:var(--ink);">QA Process &amp; Management</h3>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--accent-blue);">LEADERSHIP</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">JIRA</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">SDLC &amp; STLC</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Agile (Scrum)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Requirement &amp; Gap Analysis</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Test Plan Authoring</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Test Case Authoring</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Defect Lifecycle Triage</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">BOQ / IQA Auditing</span>
+            </div>
+          </div>
+
+          <!-- Automation, Web & DB -->
+          <div class="craft-card" style="padding:28px;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <h3 style="font-size:17px; font-weight:700; color:var(--ink);">Automation, Web &amp; Database</h3>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle);">TECHNICAL</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Java</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Selenium WebDriver</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">SQL (Backend Data Validation)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">HTML5 &amp; CSS3</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Git &amp; GitHub</span>
+            </div>
+          </div>
+
+          <!-- Domains -->
+          <div class="craft-card" style="padding:28px; grid-column:span 2;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+              <h3 style="font-size:17px; font-weight:700; color:var(--ink);">Domain Specializations</h3>
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--accent-terracotta);">PROVEN IMPACT</span>
+            </div>
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f4efe6; border:1px solid var(--accent-terracotta); color:var(--accent-terracotta); font-weight:600;">EV Charging Infrastructure (CMS &amp; EMSP)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Multi-CPO SaaS Deployment (Tirex, MINDA, TOYOTA, Electreefi)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Wallet &amp; Ledger Verification</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Enterprise Ticketing (Dynamic SLAs &amp; Escalations)</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Hardware Device Monitoring &amp; Telemetry</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Enterprise ERP (HRMS, Sales, Finance, Inventory)</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================== 03 // FLAGSHIP PROJECTS ======================== -->
+    <section id="projects" class="section-spacing">
+      <div class="container">
+        
+        <div class="section-header" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px;">
+          <div>
+            <div class="section-tag">03 // FEATURED WORK</div>
+            <h2 style="font-size:36px; font-weight:800; letter-spacing:-0.02em; color:var(--ink);">
+              Flagship Enterprise Projects
+            </h2>
+            <p style="color:var(--ink-muted); font-size:16px; margin-top:8px;">
+              Direct impact delivering zero-defect releases for high-traffic EV and enterprise SaaS platforms.
             </p>
           </div>
+          <span class="font-hand" style="font-size:22px; color:var(--accent-terracotta); font-weight:600;">
+            Real production workloads ↗
+          </span>
         </div>
 
-        <!-- Item 2 -->
-        <div class="relative flex flex-col md:flex-row items-start md:items-center gap-6 group">
-          <div class="hidden md:block w-1/2 text-right pr-8">
-            <span class="text-blue-400 font-bold text-base">Software Tester</span>
-            <p class="text-xs text-slate-400 font-medium">Crebri Technologies Pvt. Ltd.</p>
-            <p class="text-xs text-slate-500">08/2023 – 12/2024</p>
-          </div>
-          <div class="w-8 h-8 rounded-full bg-slate-700 border-4 border-slate-950 flex items-center justify-center text-white text-xs z-10 shrink-0">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <div class="w-full md:w-1/2 pl-4 md:pl-8">
-            <div class="md:hidden mb-2">
-              <span class="text-blue-400 font-bold text-base">Software Tester</span>
-              <p class="text-xs text-slate-400 font-medium">Crebri Technologies Pvt. Ltd. (08/2023 – 12/2024)</p>
+        <div style="display:flex; flex-direction:column; gap:32px;">
+
+          <!-- Project 1: Electreefi (Latest 11/2026 Highlight) -->
+          <article class="craft-card" style="padding:36px; border-left:4px solid var(--accent-terracotta);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+              <div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:600; color:var(--accent-terracotta); letter-spacing:0.06em;">
+                  MULTI-CPO SAAS DEPLOYMENT · 11/2026
+                </span>
+                <h3 style="font-size:24px; font-weight:800; color:var(--ink); margin-top:4px;">
+                  Electreefi — EV Charger Deployment &amp; Wallet Integration
+                </h3>
+                <p style="font-size:13.5px; color:var(--ink-subtle); font-family:'JetBrains Mono', monospace;">
+                  TechPerspect Software Pvt. Ltd. · Web &amp; Mobile Service App
+                </p>
+              </div>
+              <span class="badge-pill" style="background:#e8f4ec; color:var(--accent-green); border:1px solid #c2e2cc;">
+                RECENT FLAGSHIP
+              </span>
             </div>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed bg-slate-900 p-4 rounded-xl border border-slate-800">
-              Conducted functional and system testing for device monitoring services and ERP platforms. Validated complex SQL datasets and maintained regression suites.
+
+            <p style="font-size:15px; color:var(--ink-muted); line-height:1.65; margin-bottom:20px;">
+              Multi-CPO SaaS EV charger deployment ecosystem supporting <strong style="color:var(--ink);">Tirex, MINDA, TOYOTA (TKML), and Electreefi</strong>. Managed end-to-end workflows from dealership survey requests and wallet balance validation to installation partner routing, field commissioning, and automated BOQ/IQA generation.
             </p>
+
+            <!-- Detailed Bullet Highlights -->
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:24px; background:var(--bg-canvas); padding:20px; border-radius:12px; border:1px solid var(--border-warm);">
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // REQUIREMENT &amp; GAP ANALYSIS
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Analyzed multi-CPO business specifications; identified critical gaps covering wallet deduction timing, exact-balance boundary conditions, workload tie-breakers, and OTP failure fallbacks prior to execution.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // WALLET &amp; BILLING RULES
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Verified CPO-specific survey/visit cost templates and real-time wallet eligibility checks, ensuring insufficient-balance blocking, recharge alerts, and strict wallet ledger integrity.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // ROUTING &amp; AUDITABILITY
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Validated state-level Installation Partner routing, lowest-ticket-count workload distribution, Field Engineer reassignment audit history, server timestamps, and customer OTP sign-offs.
+                </p>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Multi-CPO SaaS</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Wallet &amp; Ledger Verification</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Partner Routing Logic</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Mobile Service App</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">BOQ / IQA Auditing</span>
+            </div>
+          </article>
+
+          <!-- Project 2: IOCL eCharge -->
+          <article class="craft-card" style="padding:36px; border-left:4px solid var(--accent-blue);">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+              <div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:600; color:var(--accent-blue); letter-spacing:0.06em;">
+                  CONSUMER EV ECOSYSTEM · 2025 – PRESENT
+                </span>
+                <h3 style="font-size:24px; font-weight:800; color:var(--ink); margin-top:4px;">
+                  IOCL eCharge — EV Charging Mobile App &amp; Web CMS
+                </h3>
+                <p style="font-size:13.5px; color:var(--ink-subtle); font-family:'JetBrains Mono', monospace;">
+                  TechPerspect Software Pvt. Ltd. · Android, iOS &amp; Centralized Web CMS
+                </p>
+              </div>
+            </div>
+
+            <p style="font-size:15px; color:var(--ink-muted); line-height:1.65; margin-bottom:20px;">
+              Nationwide consumer EV charging application for Indian Oil Corporation Limited (IOCL) supporting real-time charger discovery, session charging, tariff calculation, and centralized CMS operations.
+            </p>
+
+            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin-bottom:24px; background:var(--bg-canvas); padding:20px; border-radius:12px; border:1px solid var(--border-warm);">
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // CROSS-PLATFORM E2E QA
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Conducted comprehensive functional, regression, and network-interruption test cycles across both Android &amp; iOS builds alongside centralized Web CMS controllers.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // STATE SYNCHRONIZATION
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Validated live WebSocket/REST data synchronization between charger operational states (available, charging, faulted) and consumer mobile displays under variable latency.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="font-size:13px; font-family:'JetBrains Mono', monospace; color:var(--ink); font-weight:700; margin-bottom:6px;">
+                  // LIVE GRAFANA OBSERVABILITY
+                </h4>
+                <p style="font-size:13px; color:var(--ink-muted); line-height:1.55;">
+                  Monitored real-time HTTP response patterns (2xx, 4xx, 5xx) in Grafana to catch backend regressions, token expirations, and payment gateway callback drops early.
+                </p>
+              </div>
+            </div>
+
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Android &amp; iOS QA</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Centralized Web CMS</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Postman API Testing</span>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--border-warm); color:var(--ink);">Grafana Live Latency</span>
+            </div>
+          </article>
+
+          <!-- Project 3: HAVELLS EV MotrOn -->
+          <article class="craft-card" style="padding:36px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+              <div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:600; color:var(--ink-subtle); letter-spacing:0.06em;">
+                  IOT CHARGE MANAGEMENT · 09/2025 – PRESENT
+                </span>
+                <h3 style="font-size:24px; font-weight:800; color:var(--ink); margin-top:4px;">
+                  HAVELLS EV MotrOn — Charge Management System &amp; Mobile App
+                </h3>
+                <p style="font-size:13.5px; color:var(--ink-subtle); font-family:'JetBrains Mono', monospace;">
+                  TechPerspect Software Pvt. Ltd. · Web &amp; Mobile
+                </p>
+              </div>
+            </div>
+
+            <p style="font-size:15px; color:var(--ink-muted); line-height:1.65; margin-bottom:20px;">
+              Smart charge management platform and companion mobile app enabling commercial &amp; residential charger onboarding, remote start/stop operations, and scheduled charging based on dynamic tariff slabs.
+            </p>
+
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; margin-bottom:20px; font-size:14px; color:var(--ink-muted);">
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>Hardware–Software Integration:</strong> Executed end-to-end integration tests verifying reliable hardware telemetry communication across both live and scheduled charging sessions.</span>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>Grafana API Health Monitoring:</strong> Tracked API response times, latency benchmarks, and error statuses to maintain high uptime.</span>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>Parallel Test Execution:</strong> Managed multi-stream test cycles across distributed teams to deliver stable releases on tight hardware launch timelines.</span>
+              </li>
+            </ul>
+
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Hardware–Software Testing</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Grafana API Health</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Scheduled Tariffs</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Ticket Management System -->
+          <article class="craft-card" style="padding:36px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+              <div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:600; color:var(--ink-subtle); letter-spacing:0.06em;">
+                  ENTERPRISE SAAS · 05/2025 – PRESENT
+                </span>
+                <h3 style="font-size:24px; font-weight:800; color:var(--ink); margin-top:4px;">
+                  Ticket Management System — Enterprise SaaS Web &amp; Mobile
+                </h3>
+                <p style="font-size:13.5px; color:var(--ink-subtle); font-family:'JetBrains Mono', monospace;">
+                  TechPerspect Software Pvt. Ltd. · Production Ownership
+                </p>
+              </div>
+            </div>
+
+            <p style="font-size:15px; color:var(--ink-muted); line-height:1.65; margin-bottom:20px;">
+              Enterprise customer support ticketing platform equipped with dynamic SLA timers, priority automation rules, automated escalation trees, in-app calling, attachment workflows, and complete audit history.
+            </p>
+
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; margin-bottom:20px; font-size:14px; color:var(--ink-muted);">
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>Release Ownership &amp; Sign-Off:</strong> Owned QA lifecycle from initial requirement grooming through production deployment, granting final go-live sign-offs.</span>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>SLA &amp; Escalation Testing:</strong> Authored extensive test matrices simulating SLA breaches, holiday calendars, automated agent reassignment, and push notifications.</span>
+              </li>
+            </ul>
+
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">SLA Timer Testing</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Automated Escalations</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Production Sign-off</span>
+            </div>
+          </article>
+
+          <!-- Project 5: MSIL & UNO MINDA Joint Venture -->
+          <article class="craft-card" style="padding:36px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:12px; margin-bottom:16px;">
+              <div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:600; color:var(--ink-subtle); letter-spacing:0.06em;">
+                  AUTOMOTIVE JOINT VENTURE · 04/2025 – PRESENT
+                </span>
+                <h3 style="font-size:24px; font-weight:800; color:var(--ink); margin-top:4px;">
+                  MSIL &amp; UNO MINDA Integrated EV Infrastructure Ecosystem (CMS &amp; EMSP)
+                </h3>
+                <p style="font-size:13.5px; color:var(--ink-subtle); font-family:'JetBrains Mono', monospace;">
+                  Maruti Suzuki India Ltd. &amp; UNO MINDA · TechPerspect Software
+                </p>
+              </div>
+              <span class="badge-pill" style="background:#fff; border:1px solid var(--ink); color:var(--ink);">
+                QA LEAD
+              </span>
+            </div>
+
+            <p style="font-size:15px; color:var(--ink-muted); line-height:1.65; margin-bottom:20px;">
+              Unified CMS &amp; EMSP web and mobile suite developed for the Maruti Suzuki &amp; UNO MINDA joint venture to orchestrate EV charger onboarding, technician commissioning, live status telemetry, and automated IQA inspection reports.
+            </p>
+
+            <ul style="list-style:none; padding:0; display:flex; flex-direction:column; gap:10px; margin-bottom:20px; font-size:14px; color:var(--ink-muted);">
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>QA Lead &amp; Delivery:</strong> Spearheaded testing strategy across unified Web &amp; Mobile suites and validated joint-venture rollout readiness.</span>
+              </li>
+              <li style="display:flex; gap:10px; align-items:flex-start;">
+                <i class="fa-solid fa-check" style="color:var(--accent-terracotta); margin-top:4px; font-size:12px;"></i>
+                <span><strong>API &amp; Scenario Validation:</strong> Conducted strict API validation using Postman and Insomnia alongside positive and negative system edge cases.</span>
+              </li>
+            </ul>
+
+            <div style="display:flex; flex-wrap:wrap; gap:8px;">
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">QA Lead</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Automated IQA Reporting</span>
+              <span class="badge-pill" style="background:#f0ede3; border:1px solid var(--border-warm); color:var(--ink);">Insomnia &amp; Postman</span>
+            </div>
+          </article>
+
+          <!-- Projects 6 & 7: Crebri Technologies -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:24px;">
+            
+            <div class="craft-card" style="padding:28px;">
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle);">CREBRI TECH · 08/2023 – 12/2024</span>
+              <h4 style="font-size:18px; font-weight:700; color:var(--ink); margin:6px 0 10px;">Device Monitoring — System Tracking Application</h4>
+              <p style="font-size:13.5px; color:var(--ink-muted); line-height:1.6;">
+                Real-time tracking of hardware telemetry, device availability, operational diagnostics, and background alert mechanisms. Designed comprehensive test cases verifying live state transitions.
+              </p>
+            </div>
+
+            <div class="craft-card" style="padding:28px;">
+              <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle);">CREBRI TECH · 09/2022 – 03/2023</span>
+              <h4 style="font-size:18px; font-weight:700; color:var(--ink); margin:6px 0 10px;">ERP Web Application (Sales, Finance, HRMS, Inventory)</h4>
+              <p style="font-size:13.5px; color:var(--ink-muted); line-height:1.6;">
+                End-to-end ERP suite covering Sales, Finance, HRMS, and Inventory. Executed backend SQL queries to validate complex data integrity across modules and resolved critical calculation defects.
+              </p>
+            </div>
+
           </div>
+
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact & Footer -->
-  <section id="contact" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-    <div class="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-blue-950/40 to-slate-900 border border-blue-900/40">
-      <h2 class="text-3xl font-bold text-white mb-4">Let's Connect & Collaborate</h2>
-      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-8">
-        Looking for a passionate, analytical Quality Assurance Engineer to ensure high reliability and zero-defect releases for your web, mobile, or IoT platform? Let's talk!
-      </p>
-
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <a href="mailto:Saurabh0iimt@gmail.com" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm shadow-xl shadow-blue-500/25 flex items-center gap-2 transition">
-          <i class="fa-solid fa-envelope"></i> Saurabh0iimt@gmail.com
-        </a>
-        <a href="tel:+918588934132" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 flex items-center gap-2 transition">
-          <i class="fa-solid fa-phone"></i> +91 8588934132
-        </a>
       </div>
+    </section>
 
-      <div class="mt-8 pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <p>© 2026 Saurabh Shukla. Built for Test-AI-Automation.</p>
-        <p>Sultanpur, Uttar Pradesh, India</p>
+    <!-- ======================== 04 // WORK EXPERIENCE & EDUCATION ======================== -->
+    <section id="experience" class="section-spacing" style="background:#fcfbf8; border-top:1px solid var(--border-warm); border-bottom:1px solid var(--border-warm);">
+      <div class="container">
+        
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:48px;" class="about-grid">
+          
+          <!-- Career Experience Timeline -->
+          <div>
+            <div class="section-tag">04 // EXPERIENCE</div>
+            <h2 style="font-size:30px; font-weight:800; color:var(--ink); margin-bottom:28px;">
+              Career Progression
+            </h2>
+
+            <div style="display:flex; flex-direction:column; gap:28px; border-left:2px solid var(--border-warm); padding-left:24px; margin-left:8px;">
+              
+              <div style="position:relative;">
+                <div style="position:absolute; left:-31px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--accent-terracotta); border:2px solid #fff;"></div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--accent-terracotta); font-weight:600;">04/2025 – PRESENT</span>
+                <h3 style="font-size:18px; font-weight:800; color:var(--ink); margin-top:2px;">Quality Assurance Engineer</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted); font-weight:500;">TechPerspect Software Pvt. Ltd.</p>
+                <p style="font-size:13px; color:var(--ink-subtle); margin-top:6px; line-height:1.55;">
+                  Spearheading QA for flagship EV ecosystems (Electreefi, IOCL eCharge, Havells EV MotrOn, MSIL-Minda) and enterprise SaaS ticketing platforms.
+                </p>
+              </div>
+
+              <div style="position:relative;">
+                <div style="position:absolute; left:-31px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--ink); border:2px solid #fff;"></div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--ink-subtle); font-weight:600;">08/2023 – 12/2024</span>
+                <h3 style="font-size:18px; font-weight:800; color:var(--ink); margin-top:2px;">Software Tester</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted); font-weight:500;">Crebri Technologies Pvt. Ltd.</p>
+                <p style="font-size:13px; color:var(--ink-subtle); margin-top:6px; line-height:1.55;">
+                  Executed functional, integration, system, and service testing for real-time device telemetry tracking.
+                </p>
+              </div>
+
+              <div style="position:relative;">
+                <div style="position:absolute; left:-31px; top:4px; width:12px; height:12px; border-radius:50%; background:var(--ink-subtle); border:2px solid #fff;"></div>
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11.5px; color:var(--ink-subtle); font-weight:600;">09/2022 – 03/2023</span>
+                <h3 style="font-size:18px; font-weight:800; color:var(--ink); margin-top:2px;">Software Tester</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted); font-weight:500;">ERP Web Application Project</p>
+                <p style="font-size:13px; color:var(--ink-subtle); margin-top:6px; line-height:1.55;">
+                  Managed testing for ERP modules (Sales, Finance, HRMS, Inventory) using SQL queries for backend validation.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div>
+            <div class="section-tag">ACADEMIC BACKGROUND</div>
+            <h2 style="font-size:30px; font-weight:800; color:var(--ink); margin-bottom:28px;">
+              Education
+            </h2>
+
+            <div style="display:flex; flex-direction:column; gap:20px;">
+              
+              <div class="craft-card" style="padding:22px;">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--accent-terracotta); font-weight:600;">2018 – 2022</span>
+                <h3 style="font-size:17px; font-weight:700; color:var(--ink); margin-top:2px;">Bachelor of Technology (B.Tech)</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted);">APJ Abdul Kalam Technical University (AKTU)</p>
+              </div>
+
+              <div class="craft-card" style="padding:22px;">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle); font-weight:600;">2014 – 2016</span>
+                <h3 style="font-size:17px; font-weight:700; color:var(--ink); margin-top:2px;">Higher Secondary (Class XII)</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted);">Raj Singh Intermediate College, Belahri, Sultanpur, U.P.</p>
+              </div>
+
+              <div class="craft-card" style="padding:22px;">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-subtle); font-weight:600;">2013 – 2014</span>
+                <h3 style="font-size:17px; font-weight:700; color:var(--ink); margin-top:2px;">Senior Secondary (Class X)</h3>
+                <p style="font-size:13.5px; color:var(--ink-muted);">Kashi Naresh G.S.S.S. Numaye, Sultanpur, U.P.</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ======================== 05 // CONTACT & FOOTER ======================== -->
+    <section id="contact" style="background:var(--dark-canvas); color:var(--dark-text); padding:96px 0 48px;">
+      <div class="container">
+        
+        <div class="contact-grid" style="display:grid; grid-template-columns: 1fr 380px; gap:64px; align-items:flex-start;">
+          
+          <div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; font-weight:600; color:var(--accent-terracotta); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:12px;">
+              05 // GET IN TOUCH
+            </div>
+            
+            <h2 style="font-size:48px; font-weight:800; line-height:1.15; letter-spacing:-0.03em; margin-bottom:20px; color:#fff;">
+              Let's engineer reliable software together.
+            </h2>
+            
+            <p style="font-size:17px; color:var(--dark-muted); line-height:1.68; max-width:540px; margin-bottom:32px;">
+              Whether you need end-to-end quality ownership for your EV platform, complex SaaS business rule verification, or automated release gatekeeping — I'm ready to contribute.
+            </p>
+
+            <div style="display:flex; flex-wrap:wrap; gap:16px;">
+              <a href="mailto:Saurabh0iimt@gmail.com" class="hbtn" style="background:var(--accent-terracotta); color:#fff; padding:14px 28px; border-radius:12px; font-weight:600; font-size:15px;">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Send an Email</span>
+                <span style="font-size:12px;">→</span>
+              </a>
+
+              <a href="tel:+918588934132" class="hbtn" style="background:#282824; color:#fff; border:1px solid var(--dark-border); padding:14px 24px; border-radius:12px; font-weight:600; font-size:15px;">
+                <i class="fa-solid fa-phone"></i>
+                <span>+91 8588934132</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Quick Link Directory (paritosh-style) -->
+          <div style="background:var(--dark-card); border:1px solid var(--dark-border); border-radius:20px; padding:32px;">
+            <h3 style="font-size:16px; font-family:'JetBrains Mono', monospace; color:var(--dark-muted); letter-spacing:0.05em; text-transform:uppercase; margin-bottom:20px;">
+              // DIRECTORY &amp; HANDLES
+            </h3>
+
+            <div style="display:flex; flex-direction:column; gap:2px;">
+              
+              <a href="https://www.linkedin.com/in/saurabh-shukla-9815821a2" target="_blank" rel="noopener" style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--dark-border); color:var(--dark-text);">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">LINKEDIN</span>
+                <span style="font-size:14.5px; font-weight:600;">saurabh-shukla-9815821a2 ↗</span>
+              </a>
+
+              <a href="https://github.com/SaurabhShuklaSDET" target="_blank" rel="noopener" style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--dark-border); color:var(--dark-text);">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">GITHUB</span>
+                <span style="font-size:14.5px; font-weight:600;">SaurabhShuklaSDET ↗</span>
+              </a>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--dark-border); color:var(--dark-text);">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">PRIMARY EMAIL</span>
+                <span style="font-size:14px; font-weight:500;">Saurabh0iimt@gmail.com</span>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; border-bottom:1px solid var(--dark-border); color:var(--dark-text);">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">LOCATION</span>
+                <span style="font-size:14px; font-weight:500;">Sultanpur, U.P., India</span>
+              </div>
+
+              <div style="display:flex; justify-content:space-between; align-items:center; padding:14px 0; color:var(--dark-text);">
+                <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">STATUS</span>
+                <span style="font-size:13.5px; font-weight:600; color:var(--accent-green); display:flex; align-items:center; gap:6px;">
+                  <span class="pulse-dot"></span> Available Immediately
+                </span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Signature -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:80px; padding-top:28px; border-top:1px solid var(--dark-border); flex-wrap:wrap; gap:16px;">
+          <span style="font-family:'Caveat', cursive; font-size:28px; color:var(--dark-text); font-weight:600;">Saurabh Shukla</span>
+          <span style="font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--dark-muted);">
+            Crafted for SaurabhShuklaSDET · Sultanpur · 2026
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
